@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="../styles/formBuilder.css">
+
+<div class="formBuilder">
+
+  <div class='row'>
+    <div class='col-md-3'>
+      <form role="form">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"></div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></div>
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <input type="file" id="exampleInputFile">
+          <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    <div class='col-md-4'>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-md-2 control-label">Email</label>
+          <div class="col-md-10">
+            <p class="form-control-static">email@example.com</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-md-2 control-label">Password</label>
+          <div class="col-md-10">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password"></div>
+        </div>
+      </form>
+    </div>
+      <div class="col-md-4">
+        <div class="form-group has-success has-feedback">
+          <label class="control-label" for="inputSuccess2">Input with success</label>
+          <input type="text" class="form-control" id="inputSuccess2">
+          <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+        </div>
+        <div class="form-group has-warning has-feedback">
+          <label class="control-label" for="inputWarning2">Input with warning</label>
+          <input type="text" class="form-control" id="inputWarning2">
+          <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+        </div>
+        <div class="form-group has-error has-feedback">
+          <label class="control-label" for="inputError2">Input with error</label>
+          <input type="text" class="form-control" id="inputError2">
+          <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <img data-src="holder.js/100%x180" alt="...">
+        </a>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <img data-src="holder.js/100%x180" alt="...">
+        </a>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <h1>Hello, world!</h1>
+      <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+    </div>
+
+
+
+<hr>
+  <form name="baseForm" class="form-horizontal compact novalidate ng-scope ng-invalid ng-invalid-required ng-dirty">
+    <div class="control-group" id="cg_f_surname">
+      <label for="f_surname" class="control-label">Surname</label>
+      <div class="controls">
+        <input ng-model="record.surname" id="f_surname" name="f_surname" class="ng-pristine ng-invalid ng-invalid-required" autofocus="" required="" type="text"></div>
+    </div>
+    <div class="control-group" id="cg_f_forename">
+      <label for="f_forename" class="control-label">Forename</label>
+      <div class="controls">
+        <input ng-model="record.forename" id="f_forename" name="f_forename" class="ng-pristine ng-valid" type="text"></div>
+    </div>
+    <div class="control-group" id="cg_f_phone">
+      <label for="f_phone" class="control-label">Phone</label>
+      <div class="controls">
+        <input ng-model="record.phone" id="f_phone" name="f_phone" class="ng-pristine ng-valid" type="text"></div>
+    </div>
+    <div class="control-group" id="cg_f_weight">
+      <label for="f_weight" class="control-label">Weight</label>
+      <div class="controls">
+        <input ng-model="record.weight" id="f_weight" name="f_weight" class="ng-valid ng-valid-number ng-pristine" type="number"></div>
+    </div>
+    <div class="control-group" id="cg_f_eyeColour">
+      <label for="f_eyeColour" class="control-label">Eye Colour</label>
+      <div class="controls">
+        <select ng-model="record.eyeColour" id="f_eyeColour" name="f_eyeColour" class="ng-valid ng-pristine fng-invalid-required"
+              ng-options="opt for opt in ColourOptions">
+          <option value=""></option>
+        </select>
+      </div>
+    </div>
+    <div class="control-group" id="cg_f_dateOfBirth">
+      <label for="f_dateOfBirth" class="control-label">Date Of Birth</label>
+      <div class="controls">
+        <input ng-model="record.dateOfBirth" id="f_dateOfBirth" name="f_dateOfBirth" class="ng-valid hasDatepicker ng-dirty" ui-date="" ui-date-format="" type="text"></div>
+    </div>
+    <div class="control-group" id="cg_f_accepted">
+      <label for="f_accepted" class="control-label">Accepted</label>
+      <div class="controls">
+        <input ng-model="record.accepted" id="f_accepted" name="f_accepted" type="checkbox" class="ng-valid ng-pristine"></div>
+    </div>
+  </form>
+  </div>

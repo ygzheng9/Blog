@@ -1,0 +1,502 @@
+#smartisan {
+// smartisan style
+
+.container {
+  width: 100%;
+}
+
+.layout-container {
+  background: url(../images/con-bg.jpg) repeat-x;
+}
+
+.fn-clear {
+  zoom: 1;
+}
+
+.fn-clear:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.page-wrapper {
+
+  width: 1120px;
+  padding: 20px 0 25px;
+  margin: 0 auto;
+}
+
+.page-title {
+  height: 64px;
+  padding: 16px 0 0 3px;
+}
+
+.page-title h1.order {
+  background: url(../images/title-background-image-order.png) no-repeat;
+}
+
+.page-title h1 {
+  overflow: hidden;
+  display: block;
+  width: 188px;
+  height: 46px;
+  background: url(../images/title-background-image.png) no-repeat;
+  text-indent: -9999em;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+  font-size: 100%;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.page-order .confirm-last {
+  padding: 0 30px;
+}
+
+.page-order-list .order-infobox {
+  margin-top: 0;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  .confirm-last {
+    height: 62px;
+    margin-top: -1px;
+    background: #f6f6f6;
+    border-top: #e1e1e1 solid 1px;
+    border-bottom: #e1e1e1 solid 1px;
+    line-height: 62px;
+    cursor: pointer;
+  }
+}
+
+.gray-box {
+  width: 100%;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: rgba(0,0,0,.27) 0 1px 3px,#DCDCDC 0 1px 0,#DDD 0 -1px 0;
+}
+
+
+.page-order .gray-box .title {
+  position: relative;
+  z-index: 2;
+}
+
+.gray-box .title {
+  height: 60px;
+  padding: 0 10px 0 30px;
+  background: url(../images/step-order-box-title-bg.jpg) repeat-x;
+  line-height: 60px;
+  border-bottom: 1px solid #CFCFCF;
+  border-radius: 8px 8px 0 0;
+  box-shadow: rgba(0,0,0,.12) 0 1px 8px;
+}
+
+.gray-box .title h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #626262;
+  line-height: 60px;
+}
+
+.fn-left {
+  float: left;
+}
+.fn-right {
+  float: right;
+}
+.fn-left, .fn-right {
+  display: inline;
+}
+
+.blue-flat-button {
+  display: inline-block;
+  height: 36px;
+  padding: 0 20px;
+  margin: 12px 2px 0 0;
+  background: #7595E4;
+  border-radius: 8px;
+  line-height: 35px;
+  text-align: center;
+  color: #FFF;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.blue-flat-button a {
+  color: #FFF;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.gray-box .gray-box-stit {
+  padding: 0 30px;
+  background: #e6e7e8;
+  border-bottom: #e1e1e1 solid 1px;
+  line-height: 38px;
+  color: #666;
+  font-size: 14px;
+}
+
+.page-order .gray-cart-stit span {
+  float: left;
+  text-align: center;
+}
+
+.page-order .gray-cart-stit .primary-name {
+  width: 590px;
+  text-align: left;
+}
+
+.page-order .gray-cart-stit .primary-discount {
+  display: none;
+}
+
+.page-order .gray-cart-stit .primary-price {
+  width: 170px;
+}
+
+.page-order .gray-cart-stit .primary-num {
+  width: 165px;
+}
+
+.page-order .gray-cart-stit .primary-prices {
+  width: 119px;
+  padding-right: 16px;
+  text-align: right;
+}
+
+.page-order .cart {
+  width: 1120px;
+}
+
+.page-order .cart-items {
+  width: 1060px;
+  padding: 18px 0 28px;
+  margin: 0 auto;
+}
+
+.page-order .product-info {
+  position: relative;
+  width: 944px;
+  margin-left: 116px;
+}
+
+.page-order .items-thumb {
+  position: absolute;
+  left: -116px;
+  top: 0;
+}
+
+.page-order .product-head {
+  width: 944px;
+  line-height: 44px;
+  border-bottom: #efefef solid 1px;
+}
+
+.page-order {
+  .product-title {
+    float: left;
+    width: 474px;
+  }
+  .product-discount {
+    display: none;
+  }
+  .product-price {
+    float: left;
+    width: 170px;
+    text-align: center;
+  }
+
+  .quantity-select {
+    width: 165px;
+    text-align: center;
+    float: left;
+  }
+
+  .quantity-price {
+    float: left;
+    width: 119px;
+    padding-right: 16px;
+    text-align: right;
+    font-weight: 700;
+  }
+  .product-shipping {
+    font-size: 12px;
+    color: #999;
+    line-height: 26px;
+    padding: 10px 0;
+  }
+  .product-config {
+    padding: 10px 0;
+    border-top: #efefef solid 1px;
+    line-height: 30px;
+    width: 944px;
+  }
+
+  .recom-product {
+    width: 944px;
+    font-size: 12px;
+    line-height: 26px;
+    color: #999;
+
+    .recom-thumb {
+        float: left;
+        width: 82px;
+        height: 70px;
+      }
+       .recom-title {
+        float: left;
+        width: 392px;
+        padding: 10px 0;
+      }
+      .recom-title h4 {
+        color: #333;
+        font-weight: 400;
+      }
+
+      @mixin xx_cell($wth) {
+        float: left;
+        line-height: 78px;
+        font-size: 14px;
+        text-align: center;
+        color: #666;
+
+        width: $wth;
+      }
+
+      .product-price {
+        @include xx_cell(170px);
+      }
+
+      .quantity-select {
+        @include xx_cell(165px);
+      }
+
+      .quantity-price {
+        @include xx_cell(119px);
+
+        text-align: right;
+        padding-right: 16px;
+        font-weight: 700;
+      }
+  }
+
+  .order-other-slide {
+    background: url(../images/order-other-info-icons.png) -9px -93px no-repeat;
+    padding-left: 25px;
+  }
+
+  .opened .order-other-slide {
+    background-position: -9px -51px;
+  }
+
+  .confirm-last {
+    height: 62px;
+    margin-top: -1px;
+    background: #f6f6f6;
+    border-top: #e1e1e1 solid 1px;
+    border-bottom: #e1e1e1 solid 1px;
+    line-height: 62px;
+    cursor: pointer;
+
+    .confirm-lastest-prices {
+      float: right;
+      padding-top: 16px;
+    }
+
+    p {
+      line-height: 30px;
+      text-align: right;
+
+      b {
+        color: #000;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .order-status-now {
+    width: 998px;
+    background: #F6F6F6;
+    border: #dadada solid 1px;
+    border-radius: 5px;
+    padding: 20px 30px;
+    margin: 0 auto;
+    line-height: 38px;
+
+    h3 {
+      color: #666;
+      font-size: 24px;
+      line-height: 40px;
+    }
+  }
+}
+
+.small-blue-btn {
+  background: #89a8f2;
+  color: #fff;
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 25px;
+  border-radius: 5px;
+  margin: 0 0 0 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.small-red-btn {
+  background: #DC8B8B;
+  color: #fff;
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 25px;
+  border-radius: 5px;
+  margin: 0 0 0 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.small-gray-btn {
+  background: #b6b9bd;
+  color: #fff;
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 25px;
+  border-radius: 5px;
+  margin: 0 10px;
+  font-size: 12px;
+}
+
+div {
+  display: block;
+}
+
+.order-update-box {
+  width: 480px;
+  padding: 15px;
+
+  .sub-title {
+    height: 25px;
+    padding: 15px 0;
+
+    h4 {
+      float: left;
+      font-size: 18px;
+    }
+  }
+
+  .order-animate-box {
+    position: relative;
+
+    P {
+      text-align: right;
+    }
+  }
+
+  .sub-info {
+    padding: 0 0 20px 15px;
+    line-height: 32px;
+  }
+}
+
+.order-update-other-box {
+  width: 450px;
+}
+
+.order-info-wrapper {
+  margin: 0;
+  height: 599px;
+
+  h5 {
+    font-weight: 500;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .order-status-wrapper {
+    position: relative;
+    top: 1px;
+    z-index: 2;
+    overflow: hidden;
+    width: 1060px;
+    height: 140px;
+    margin: 30px auto 0;
+  }
+
+  .order-status-process {
+    position: relative;
+    width: 930px;
+    height: 38px;
+    margin: 33px auto 0;
+    background: url(../images/status-bg.png) repeat-x 0 -129px;
+  }
+
+  .status-process {
+    display: block;
+    height: 38px;
+    background: url(../images/status-bg.png) repeat-x 0 -29px;
+  }
+
+  .order-status-text {
+    position: absolute;
+    left: 0;
+    top: -33px;
+    width: 200px;
+    height: 140px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+
+    h5 {
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      color: green;
+    }
+
+    .status-done {
+      .point {
+        background: url(../images/status-done.png) no-repeat;
+      }
+    }
+
+    .point {
+      display: block;
+      width: 38px;
+      height: 38px;
+      margin: 17px auto 5px;
+      background: url(../images/status-off.png) no-repeat;
+    }
+  }
+
+  .status-last {
+    .point {background: url(../images/status-off-last.png) no-repeat;}
+  }
+
+  .status-on {
+    .point {background: url(../images/status-on.png) no-repeat;}
+    h5 {color: red; }
+  }
+
+  .status-done {
+    .point {background: url(../images/status-done.png) no-repeat;}
+    h5 {color: black; }
+  }
+
+  .status-first.status-done  {
+    .point {background: url(../images/status-done-first.png) no-repeat;}
+  }
+}
+
+}

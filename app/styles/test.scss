@@ -1,0 +1,59 @@
+body {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 10px;
+  font-size: 13px;
+}
+
+#outer1 {
+  background: #0000ee;
+  padding: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.xx_float {
+  float: left;
+
+  margin: 0px;
+  padding: 0px;
+}
+
+@mixin text_wrapper {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#d1 {
+  background: #ff00ff;
+
+  height: 120px;
+  width: 100px;
+
+  @include text_wrapper;
+}
+
+#d2 {
+  background: #aa00aa;
+
+   width: 150px;
+   height: 90px;
+
+   @include text_wrapper;
+}
+
+#d3 {
+  background: #eeeeee;
+
+   width: 200px;
+   height: 120px;
+
+   @include text_wrapper;
+}
+
+.clear {
+  clear: both;
+  background: #111111;
+}

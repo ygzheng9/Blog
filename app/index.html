@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/ng-grid/ng-grid.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+
+  <body ng-app="tstApp">
+
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="container-fluid">
+      <div class="header">
+        <nav class="navbar navbar-default" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#full_menu">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Explore the wonderful world.</a>
+          </div>
+          <div class="collapse navbar-collapse" id="full_menu">
+            <ul class="nav navbar-nav nav-pills pull-right">
+              <li ng-class="{active: curr[0]}">
+                <a ng-href="#">Home</a>
+              </li>
+              <li ng-class="{active: curr[1]}">
+                <a ng-href="#/about">About</a>
+              </li>
+              <li ng-class="{active: curr[2]}">
+                <a ng-href="#/list">List</a>
+              </li>
+              <li ng-class="{active: curr[3]}">
+                <a ng-href="#/filter">Filter</a>
+              </li>
+              <li ng-class="{active: curr[4]}">
+                <a ng-href="#/news">News</a>
+              </li>
+              <li ng-class="{active: curr[5]}">
+                <a ng-href="#/form">Form</a>
+              </li>
+              <li ng-class="{active: curr[6]}">
+                <a ng-href="#/formBuilder">Builder</a>
+              </li>
+              <li ng-class="{active: curr[7]}">
+                <a ng-href="#/grid">Grid</a>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+      </div>
+
+      <div class="main" ng-view=""></div>
+
+      <div class="footer">
+        <p>
+          <span class="glyphicon glyphicon-heart"></span>
+          from the Yeoman team
+        </p>
+      </div>
+    </div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/ng-grid/build/ng-grid.js"></script>
+    <script src="bower_components/angular-underscore-module/angular-underscore-module.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/list.js"></script>
+    <script src="scripts/controllers/filter.js"></script>
+    <script src="scripts/controllers/news.js"></script>
+    <script src="scripts/controllers/form.js"></script>
+    <script src="scripts/controllers/formBuilder.js"></script>
+    <script src="scripts/controllers/grid.js"></script>
+
+    <script src="scripts/services/appServices.js"></script>
+    <script src="scripts/services/friends.js"></script>
+    <script src="scripts/services/items.js"></script>
+
+    <!-- endbuild -->
+
+  </body>
+</html>

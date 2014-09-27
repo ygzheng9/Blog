@@ -1,0 +1,156 @@
+#ulList{
+
+  .container {
+    width: 1170px;
+
+    .list {
+      list-style: none;
+      padding-left: 0px;
+
+      .item {
+        width: 12.5%;
+        font-size: 24px;
+
+        float: left;
+        height: 130px;
+        padding: 10px;
+
+        border: 1px solid #fff;
+        background-color: #f9f9f9;
+        line-height: 1.4;
+        // text-align: center;
+
+        // display: list-item;
+        display: table;
+
+        .fmt {
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+
+      .label-class {
+        font-size: 12px;
+        display: block;
+        // text-align: center;
+        word-wrap: break-word;
+      }
+
+      li:hover {
+        color: #fff;
+        background: #000;
+        font-size: 20;
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+
+    .cls {
+      clear: both;
+    }
+
+    .lt2 {
+      list-style: none;
+      padding-left: 0px;
+
+      li {
+        float: left;
+        position: relative;
+
+        width: 33%;
+        height: 130px;
+
+        padding-right: 20px;
+        padding-bottom: 10px;
+
+        display: table;
+
+        .label {
+          position: absolute;
+          padding: 5px;
+
+          top: -10px;
+          right: 10px;
+        }
+      }
+
+      .li-1 {
+        width: 10%;
+      }
+      .li-2 {
+        width: 40%;
+      }
+      .li-3 {
+        width: 50%;
+      }
+
+      .wrapper {
+        width: 100%;
+        border: 1px solid #aaa;
+        background-color: #a9a9a9;
+
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+
+        // padding-right: 10px;
+        // padding-bottom: 20px;
+
+      }
+    }
+
+    .wrapper:hover {
+      color: red;
+      background: #eeeeee;
+      font-size: 20;
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    .widget-box {
+      width: 100%;
+      background: none repeat scroll 0 0 #F9F9F9;
+      border-left: 1px solid #CDCDCD;
+      border-top: 1px solid #CDCDCD;
+      border-right: 1px solid #CDCDCD;
+      clear: both;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .widget-title {
+      background: #efefef;
+      border-bottom: 1px solid #CDCDCD;
+      height: 36px;
+
+      span.icon {
+        padding: 10px;
+
+        float: left;
+        border-right: 1px solid #dadada;
+      }
+
+      h5 {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-left: 50px;
+        line-height: 12px;
+      }
+    }
+
+    .widget-content {
+      width: 100%;
+      padding: 5px;
+      border-bottom: 1px solid #cdcdcd;
+    }
+
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+
+
+  }
+}

@@ -1,0 +1,5 @@
+[
+  {"name": "Heidi", "age": 23, "isSpecial": true},
+  {"name": "Craig", "age": 25, "isSpecial": false},
+  {"name": "Daniel", "age": 6, "isSpecial": false}
+]

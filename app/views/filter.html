@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="../styles/filter.css">
+
+<div id="filter">
+  I'm the filter View.
+  <p>{{data}}</p>
+
+  <div id="upper1">
+    <div>
+      <label class="control-label" for="inputCate">Category: </label>
+      <select id="inputCate" ng-model="currCate" ng-change="chgCate(currCate.name)"
+          ng-options="c.name for c in categories">
+          <option value="">-- choose category --</option>
+      </select>
+    </div>
+    <div ng-show="hasChild">
+      <label for="inputItem">Items: </label>
+      <select id="inputItem" ng-model="currItem"
+          ng-options="i.name for i in items | filter:{category: currCate.name}">
+        <option value="">-- choose item --</option>
+      </select>
+
+    </div>
+  </div>
+
+  <div id="upper2">
+    <div class="list" ng-repeat="c in categories" >
+      <div class="group" ng-class="{selected: isCateSelected(c.name)}">
+        <h2>{{c.name}}</h2>
+      </div>
+      <div class="item" ng-class="{selected: isItemSelected(i.name)}"
+            ng-repeat="i in items | filter:{category: c.name}">{{i.name}}
+    </div>
+  </div>
+
+  <div style="clear:both"></div>
+
+</div>
+</div>

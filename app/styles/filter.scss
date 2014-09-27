@@ -1,0 +1,35 @@
+#filter {
+    * {
+    font-size: 100%;
+    // font-weight: 500;
+    margin: 0;
+    padding: 0;
+  }
+
+  #upper2 {
+    .list {
+      float: left;
+      width: 170px;
+      margin-right: 5px;
+      text-align: center;
+      background-color: #F9F7ED;
+
+      .group {
+        background: #eeeeff;
+      }
+
+      .group.selected {
+        background: #00ff00;
+      }
+
+      .item {
+        margin-top: 10px;
+      }
+
+      .item.selected {
+        background: #0000ff;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,26 @@
+[
+  { "category": "Fruit",
+    "name": "Apple"
+  },
+  { "category": "Fruit",
+    "name": "Orange"
+  },
+  { "category": "Fruit",
+    "name": "Banana"
+  },
+  { "category": "Meat",
+    "name": "Pork 猪肉"
+  },
+  { "category": "Meat",
+    "name": "Beef"
+  },
+  { "category": "Drink",
+    "name": "7-up"
+  },
+  { "category": "Drink",
+    "name": "Coco"
+  },
+  { "category": "Drink",
+    "name": "Tea"
+  }
+]

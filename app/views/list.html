@@ -1,0 +1,217 @@
+<link rel="stylesheet" href="../styles/list.css">
+
+<div id="smartisan">
+
+<div class="layout-container fn-clear ng-scope">
+
+  <div class="page-wrapper page-order page-order-list ng-scope">
+    <div class="page-title">
+      <h1 class="order">我的订单</h1>
+    </div>
+
+    <div class="gray-box order-infobox fn-clear ng-scope">
+      <div class="title-bg">
+        <div class="title">
+          <h2 class="fn-left">订单号: 140520920082299</h2>
+          <div class="blue-flat-button fn-right">
+            <a class="order-payment" href="#">补齐余款</a>
+          </div>
+        </div>
+      </div>
+      <div class="title-shadow"></div>
+      <div class="confirm-order">
+        <div class="gray-box-stit gray-cart-stit fn-clear">
+          <span class="primary-name">商品名称</span>
+          <span class="primary-discount">优惠</span>
+          <span class="primary-price">单价</span>
+          <span class="primary-num">数量</span>
+          <span class="primary-prices">小计</span>
+        </div>
+        <div class="cart">
+
+          <div class="cart-items fn-clear ng-scope">
+            <div class="product-info">
+              <div class="items-thumb">
+                <img src="../images/01_80.png"></div>
+              <div class="product-head fn-clear">
+                <div class="product-title">
+                  <h3> <em class="ng-binding">Smartisan T1 黑色 32GB</em>
+                  </h3>
+                </div>
+                <div class="product-discount ng-binding">￥0</div>
+                <div class="product-price ng-binding" ng-class="{ 'text-decoration-line' : order.discount_amount != '0.00' }">￥3,150</div>
+                <div class="quantity-select ng-binding">1</div>
+                <div class="quantity-price ng-binding">￥3,150</div>
+              </div>
+              <div class="product-shipping fn-clear">
+                <div class="fn-left ng-binding">商品编号：100000002</div>
+                <div class="fn-right"></div>
+              </div>
+              <div class="product-config" ng-class="{ 'fn-hide' : (cart.is_mobile == 0 || cart.service.length == 0) }">
+                <h3>服务和支持</h3>
+
+                <div class="recom-product fn-clear ng-scope" >
+                  <div class="recom-thumb">
+                    <img src="../images/04.png"></div>
+                  <div class="recom-title">
+                    <div class="fn-clear">
+                      <h4 class="fn-left ng-binding">意外保修服务</h4>
+                    </div>
+                    <p>已自动通过您的 Smartisan T1 硬件注册。</p>
+                  </div>
+                  <div class="product-price ng-binding">￥200</div>
+                  <div class="quantity-select">1</div>
+                  <div class="quantity-price ng-binding">￥200</div>
+                </div>
+
+                <div class="recom-product fn-clear ng-scope" >
+                  <div class="recom-thumb">
+                    <img src="../images/05.png"></div>
+                  <div class="recom-title">
+                    <div class="fn-clear">
+                      <h4 class="fn-left ng-binding">延长保修服务</h4>
+                    </div>
+                    <p>已自动通过您的 Smartisan T1 硬件注册。</p>
+                  </div>
+                  <div class="product-price ng-binding">￥200</div>
+                  <div class="quantity-select">1</div>
+                  <div class="quantity-price ng-binding">￥200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="confirm-last" ng-click="isShow = !isShow" ng-class="{'opened': isShow}">
+          <span class="confirm-info order-other-slide fn-left" ng-if="isShow">隐藏订单详情</span>
+          <span class="confirm-info order-other-slide fn-left" ng-if="!isShow">显示订单详情</span>
+          <span class="confirm-lastest-prices">
+            <p> <b>订单总计：￥3,550</b>
+            </p>
+          </span>
+        </div>
+
+        <div class="order-info-wrapper" ng-show="isShow">
+
+          <select ng-model="processStatus" ng-options="v for v in totalStatus"></select>
+
+          <div class="order-status-wrapper" >
+            <div class="order-status-process">
+              <span class="status-process" ng-style="{ 'width': processStatus * width + 'px'}" ></span>
+
+              <div class="order-status-text status-first" ng-class="{'status-done' : processStatus >
+                0, 'status-on' : processStatus == 0 }" ng-style="{'width': width + 'px', 'left' : '-' + width / 2 + 'px'}">
+                <h5>下单完成</h5>
+                <span class="point"></span>
+                <p ng-bind="order.create_time | date:'yyyy-MM-dd'"></p>
+                <p ng-bind="order.create_time | date: 'hh:mm'"></p>
+              </div>
+
+              <div class="order-status-text " ng-class="{'status-done' : processStatus >
+                1, 'status-on' : processStatus == 1 }" ng-style="{'width': width + 'px', 'left' : width / 2 + 'px'}">
+                <h5>已付预付款</h5>
+                <span class="point"></span>
+                <p ng-bind="order.create_time | date:'yyyy-MM-dd'"></p>
+                <p ng-bind="order.create_time | date: 'hh:mm'"></p>
+              </div>
+
+              <div class="order-status-text " ng-class="{'status-done' : processStatus >
+                2, 'status-on' : processStatus == 2 }" ng-style="{'width': width + 'px', 'left' : (width / 2 + width * (step - 4)) + 'px'}">
+                <h5>已付余款</h5>
+                <span class="point"></span>
+                <p ng-bind="order.create_time | date:'yyyy-MM-dd'"></p>
+                <p ng-bind="order.create_time | date: 'hh:mm'"></p>
+              </div>
+
+              <div class="order-status-text " ng-class="{'status-done' : processStatus >
+                3, 'status-on' : processStatus == 3 }" ng-style="{'width': width + 'px', 'left' : (width / 2 + width * (step - 3)) + 'px'}">
+                <h5>配货</h5>
+                <span class="point"></span>
+                <p ng-bind="order.create_time | date:'yyyy-MM-dd'"></p>
+                <p ng-bind="order.create_time | date: 'hh:mm'"></p>
+              </div>
+
+              <div class="order-status-text " ng-class="{'status-done' : processStatus >
+                4, 'status-on' : processStatus == 4 }" ng-style="{'width': width + 'px', 'left' : (width / 2 + width * (step - 2)) + 'px'}">
+                <h5>出库</h5>
+                <span class="point"></span>
+                <p ng-bind="order.create_time | date:'yyyy-MM-dd'"></p>
+                <p ng-bind="order.create_time | date: 'hh:mm'"></p>
+              </div>
+
+              <div class="order-status-text status-last" ng-class="{'status-done' : processStatus >
+                5, 'status-on' : processStatus == 5 }" ng-style="{'width': width + 'px', 'left' : (width / 2 + width * (step - 1)) + 'px'}">
+                <h5>交易成功</h5>
+                <span class="point"></span>
+                <p ng-bind="order.create_time | date:'yyyy-MM-dd'"></p>
+                <p ng-bind="order.create_time | date: 'hh:mm'"></p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="order-status-now">
+            <h3 class="ng-binding">订单状态：等待补齐余款 ￥3250</h3>
+            <p >在为此订单配货前 3 天，系统将发短信和邮件提示您付款。</p>
+
+            <p >
+              您可以
+              <span class="ng-scope ng-isolate-scope">
+                <a class="small-blue-btn pre-payment ng-binding" >补齐余款</a>
+              </span>
+              <span >
+                <a class="small-blue-btn" ng-click="cancelResetOrder()">退款并保留排队位置</a>
+              </span>
+
+              <a class="small-red-btn ng-binding" ng-click="cancelOrder()">退款并取消排队位置</a>
+            </p>
+          </div>
+
+          <div class="order-update-inner fn-clear">
+            <div class="order-update-box fn-left">
+              <div class="sub-title fn-clear">
+                <h4>收货信息</h4>
+                <!-- ngIf: canUpdate -->
+                <a class="small-gray-btn js-trigger-update-btn ng-scope">修改收货信息</a>
+                <!-- end ngIf: canUpdate --> </div>
+              <div class="order-animate-box">
+                <div class="sub-info">
+                  <p>姓名：郑永刚</p>
+                  <p>详细地址：上海市市辖区虹口区四平路421弄116号301室</p>
+                  <p>联系电话：13651613829</p>
+                 </div>
+              </div>
+            </div>
+            <div class="order-update-box order-update-other-box fn-right">
+              <div class="sub-title fn-clear">
+                <h4>发票信息</h4>
+                <!-- ngIf: canUpdate -->
+                <a class="small-gray-btn js-trigger-update-btn ng-scope" >修改发票信息</a>
+                <!-- end ngIf: canUpdate --> </div>
+              <div class="order-animate-box">
+                <div class="sub-info">
+                  <p>发票类型：普通发票</p>
+                  <p>发票抬头：个人</p>
+                  <p>发票内容：购买商品明细</p>
+                </div>
+                 </div>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+  </div>
+</div>
+
+<h3>----------</h3>
+<hr>
+<p>This is the list view.</p>
+<ul>
+  <li ng-repeat="item in awesomeThings">{{item}}</li>
+</ul>
+
+<h3>----------</h3>
+<hr></div>
+
+</div>

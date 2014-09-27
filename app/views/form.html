@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="../styles/form.css">
+
+<div id="form">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="content">
+            <div class="item">
+              <label for="name">姓名</label>
+              <input type="text" id="name" ng-model="employee.name">
+            </div>
+            <div class="item">
+              <label for="sn">工号</label>
+              <input type="number" id="sn" ng-model="employee.sn">
+            </div>
+            <div class="item">
+              <label for="gender">性别</label>
+              <input type="radio" id="gender" ng-model="employee.gender" value="X">男
+              <input type="radio" id="gender" ng-model="employee.gender" value="Y">女
+              <input type="radio" id="gender" ng-model="employee.gender" value="U">保密
+            </div>
+            <div class="item">
+              <label for="gradu">最高学历</label>
+              <select id="gradu" ng-model="employee.gradu"
+                  ng-options="n for n in gradu_level"></select><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="content">
+            <div class="item">
+              <label for="email">Email</label>
+              <input type="email" id="email" ng-model="employee.email">
+            </div>
+            <div class="item">
+              <label for="url">主页</label>
+              <input type="text" id="url" ng-model="employee.url">
+            </div>
+            <div class="item">
+              <label for="hobbies">爱好</label>
+              <div id='hobby_group'>
+                <input type="checkbox" id="hobbies" ng-model="employee.hobbies.swimming">游泳
+                <input type="checkbox" id="hobbies" ng-model="employee.hobbies.reading">看书
+                <input type="checkbox" id="hobbies" ng-model="employee.hobbies.running">跑步
+                <input type="checkbox" id="hobbies" ng-model="employee.hobbies.sleeping">睡觉 <br/>
+                <input type="checkbox" id="hobbies" ng-model="employee.hobbies.swimming">游泳
+                <input type="checkbox" id="hobbies" ng-model="employee.hobbies.reading">看书
+                <input type="checkbox" id="hobbies" ng-model="employee.hobbies.running">跑步
+                <input type="checkbox" id="hobbies" ng-model="employee.hobbies.sleeping">睡觉 <br/>
+                <input type="checkbox" id="hobbies" ng-model="employee.hobbies.swimming">游泳
+                <input type="checkbox" id="hobbies" ng-model="employee.hobbies.reading">看书
+                <input type="checkbox" id="hobbies" ng-model="employee.hobbies.running">跑步
+                <input type="checkbox" id="hobbies" ng-model="employee.hobbies.sleeping">睡觉
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content">
+            <div class="item">
+              <label for="comment">备注说明</label>
+              <textarea row=5 id="comment" ng-model="employee.comment"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
